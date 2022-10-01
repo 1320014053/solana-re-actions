@@ -1,0 +1,34 @@
+name: emulator
+
+on: workflow_dispatch
+    
+permissions:
+  contents: read
+jobs:
+  build:
+    name: emulator
+
+    runs-on: windows-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+            ref: Hmac
+            path: solana-re
+
+
+      - name: build
+        run: |
+            dir
+            cd solana-re
+            dir
+            vcpkg install openssl:x64-windows-static-md
+            cargo update
+            cargo build --bin level7 --release
+
+      - name: Copy
+        uses: actions/upload-artifact@v3
+        with:
+            name: release
+            path: solana-re/target/release/level7.exe
