@@ -27,7 +27,7 @@ jobs:
             dir
             vcpkg install openssl:x64-windows-static-md
             cargo update
-            cargo build --bin level7 --release
+            cargo build --bin level7
 
       - name: Copy
         uses: actions/upload-artifact@v3
