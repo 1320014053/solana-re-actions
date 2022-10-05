@@ -27,10 +27,10 @@ jobs:
             dir
             vcpkg install openssl:x64-windows-static-md
             cargo update
-            cargo build --bin level7
+            cargo build --bin level6
 
       - name: Copy
         uses: actions/upload-artifact@v3
         with:
             name: release
-            path: solana-re/target/debug/level7.exe
+            path: solana-re/target/debug/level6.exe
