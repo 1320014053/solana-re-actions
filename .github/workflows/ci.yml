@@ -33,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
             name: release
-            path: solana-re/target/release/level7.exe
+            path: solana-re/target/debug/level7.exe
