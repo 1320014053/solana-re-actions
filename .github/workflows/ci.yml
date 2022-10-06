@@ -8,7 +8,7 @@ jobs:
   build:
     name: emulator
 
-    runs-on: INSTANCE-1
+    runs-on: self-hh
 
     steps:
 
