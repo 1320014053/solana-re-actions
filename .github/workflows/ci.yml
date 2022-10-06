@@ -2,8 +2,7 @@ name: emulator
 
 on: workflow_dispatch
     
-permissions:
-  contents: read|write
+
 jobs:
   build:
     name: emulator
