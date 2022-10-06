@@ -25,6 +25,8 @@ jobs:
             dir
             cd solana-re
             dir
+            git config core.symlinks true
+            git reset --hard
             vcpkg install openssl:x64-windows-static-md
             cargo update
             cargo build --bin level6
