@@ -31,8 +31,4 @@ jobs:
             cargo update
             cargo build --bin level6
 
-      - name: Copy
-        uses: actions/upload-artifact@v3
-        with:
-            name: release
-            path: solana-re/target/debug/level6.exe
+
