@@ -8,7 +8,7 @@ jobs:
   build:
     name: emulator
 
-    runs-on: windows-latest
+    runs-on: self-hosted
 
     steps:
 
